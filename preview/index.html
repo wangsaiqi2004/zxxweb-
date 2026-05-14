@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/statics/default/css/mingshang-eco.css?v=20260514">
 </head>
 <body>
+    <div class="eco-progress" data-progress></div>
     <a class="eco-skip" href="#main">跳到主要内容</a>
 
     <header class="eco-header" data-header>
@@ -370,27 +371,6 @@
         <a href="tel:4006635698">电话</a>
     </div>
 
-    <script>
-    (function () {
-        var header = document.querySelector('[data-header]');
-        var toggle = document.querySelector('[data-nav-toggle]');
-        var nav = document.querySelector('[data-nav]');
-
-        function setHeaderState() {
-            if (!header) return;
-            header.classList.toggle('is-scrolled', window.scrollY > 8);
-        }
-
-        if (toggle && nav) {
-            toggle.addEventListener('click', function () {
-                var isOpen = nav.classList.toggle('is-open');
-                toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            });
-        }
-
-        setHeaderState();
-        window.addEventListener('scroll', setHeaderState, { passive: true });
-    })();
-    </script>
+    <script src="/statics/default/js/mingshang-eco.js?v=20260514"></script>
 </body>
 </html>
